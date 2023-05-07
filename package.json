@@ -1,0 +1,58 @@
+{
+  "type": "module",
+  "scripts": {
+    "dev": "node ./server",
+    "test": "playwright test",
+    "test:report": "playwright show-report",
+    "build": "vite build",
+    "setup": "node scripts/setup.js",
+    "start": "cross-env NODE_ENV=production node ./server"
+  },
+  "dependencies": {
+    "@blueprintjs/core": "^4.17.0",
+    "@neondatabase/serverless": "^0.2.9",
+    "@vitejs/plugin-react": "^2.0.1",
+    "compression": "^1.7.4",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.3",
+    "drizzle-orm": "0.25.4",
+    "express": "^4.17.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-streaming": "0.3.5",
+    "sirv": "^2.0.2",
+    "sql-highlight": "^4.3.2",
+    "telefunc": "0.1.50",
+    "vite": "^3.0.9",
+    "vite-plugin-ssr": "^0.4.90",
+    "ws": "^8.13.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.31.2",
+    "@types/react": "^18.0.18",
+    "@types/react-dom": "^18.0.6",
+    "eslint": "^8.35.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-config-recommended": "^4.1.0",
+    "vite-plugin-eslint": "^1.8.1"
+  },
+  "eslintConfig": {
+    "root": true,
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+    },
+    "extends": [
+      "eslint:recommended",
+      "react-app"
+    ],
+    "ignorePatterns": [
+      "dist"
+    ],
+    "rules": {
+      "react/prop-types": "warn",
+      "react/react-in-jsx-scope": "off",
+      "no-unused-vars": "warn"
+    }
+  }
+}
